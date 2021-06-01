@@ -30,19 +30,19 @@ const FULLNAME =  firstName + " " + lastName;
 alert(FULLNAME);
 
 // Declare three variables `name,` `newUser` and `isAdmin`.
-let name = "Anuj Kumar", newUser = "Anuj Kumar", isAdmin = "true";
+let name , newUser , isAdmin; 
 
 // Assign your name as the value of `name`.
 
-name = "Anuj Kumar",
+name = "Anuj Kumar"; 
 
 // Assign the value of `name` to `newUser`.
 
-newUser = "Anuj Kumar"
+newUser = name;
 
 // Set the value of `isAdmin` to `true`.
 
-isAdmin = "true";
+isAdmin = true;
 
 // Alert the values of all the three variables.
 
@@ -98,4 +98,4 @@ let multipleAmount = amount*7;
 
 // Declare a variable `dividedAmount`. It should store the resultant of amount divided by 57.
 
-let dividedAmount = amount/57;
+let dividedAmount = amount / 57;
