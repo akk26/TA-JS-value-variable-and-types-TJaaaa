@@ -10,7 +10,9 @@
 let number = Number(prompt("Enter any number?"));
 if (number % 2 === 0 ) {
   alert ("number is even!");
-} else{alert("number is odd!");}
+} else{
+  alert("number is odd!");
+}
  
 
 
@@ -19,18 +21,17 @@ if (number % 2 === 0 ) {
 let numberA = Number(prompt("Enter any number?"));
 let numberB = Number(prompt("Enter any number?"));
 if (numberA > numberB) {
-  alert (numberA)
-} else {
-  alert(numberB);
+  alert (`${numberA} is greater`);
+} else { alert (`${numberB} is greater`);
 }
 
 // 3. Convert the above code using`?` terniary operator
 
-let numberA = Number(prompt("Enter any number?"));
+// let numberA = Number(prompt("Enter any number?"));
 
-let numberB = Number(prompt("Enter any number?"));
+// let numberB = Number(prompt("Enter any number?"));
 
-numberA > numberB ? alert(numberA) : alert(numberB)
+numberA > numberB ? alert (`${numberA} is greater`) : alert (`${numberB} is greater`)
 
 
 /*
@@ -42,11 +43,17 @@ numberA > numberB ? alert(numberA) : alert(numberB)
 */
 
 let houseName = prompt("Enter the house name?");
-if (houseName === "stark") 
-console.log("Winter is coming");
-else if (houseName === "lannister") 
-console.log("A lannister always pays his debt"); 
-else console.log("All men must die");
+if (houseName === "stark") {
+alert("Winter is coming");
+} else if (houseName === "lannister") {
+  alert("A lannister always pays his debt"); 
+}
+else {
+  alert("All men must die");
+}
+
+houseName === "stark" ? alert("Winter is coming"): houseName === "lannister" ?  alert("A lannister always pays his debt"): alert("All men must die");
+
 
 
 
@@ -110,6 +117,8 @@ switch(month) {
   case 12:  
   alert("31days"); 
   break;
+  default: alert("Not a valid month"); 
+  break;
 }
 
 /* 7.
@@ -128,6 +137,28 @@ if(salary <= 20000) {
 } else if(salary > 50000 ) {
   alert(`In hand salary  ${salary - ((salary*30)/100)}`);
 }
+
+switch(true){
+
+  case salary <= 20000: 
+  let tax = (salary * 10) / 100;
+  alert(`Your in-hand amount is ${(salary - tax)}`);
+  break;
+
+  case salary <= 40000: 
+  tax = (salary * 20) / 100;
+  alert(`Your in-hand amount is ${(salary - tax)}`);
+  break;
+  
+  case salary > 50000: 
+  tax = (salary * 30) / 100;
+  alert(`Your in-hand amount is ${(salary - tax)}`);
+  break;
+  default: alert(`Not a valid input`)
+}   
+
+
+  
 //  if..else vs switch
 
 /* 8.
@@ -157,7 +188,6 @@ if(marks > 100){
 
 // using switch
 
-let marks = 100;
 switch (true){
   case  marks > 100 :
   alert("Marks can't be grater than 100");
@@ -191,24 +221,24 @@ switch (true){
   - Anything else should alert`Not a valid input`
 */
 
-let weather = prompt("What is the weather like outside?");
+let weather = prompt(`What is the weather like outside?`);
 
 switch(weather){
   case "sunny":
-  alert ("Wear a T-shirt")
+  alert (`Wear a T-shirt`)
   break;
 
   case "rainy":
-  alert ("Don't forget to take your raincoat")
+  alert (`Don't forget to take your raincoat`)
   break;
 
   case "hot" :
-  alert ("Get a hanky")
+  alert (`Get a hanky`)
   break;
 
   case "freezing":
-  alert ("Get your sweeter on")
+  alert (`Get your sweeter on`)
   break;
 
-  default : alert("Not a valid input");
+  default : alert(`Not a valid input`);
 }
