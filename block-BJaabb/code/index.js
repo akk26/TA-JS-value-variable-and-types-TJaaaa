@@ -15,7 +15,7 @@ console.log(user, userName);
 let age = 22, isLearning = "true" ;
 
 user= "John"
-console.log(user, userName)
+console.log(user, "user", userName, "user name")
 
 
 /* 2.
@@ -33,10 +33,8 @@ alert(`Total value is ${sum}`)
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j++){
-  if(j % 2 === 0 ){
+for (let j = 0; j <= 10; j += 2){
     console.log (j)
-  }
 }
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
@@ -51,7 +49,7 @@ for (let j = 9; j > 0; j--){
  let i = "5";
  let str = "";
  while(i >= 0){
-   str = str + i;
+   str += i;
    i--; 
   }
   console.log(str);
@@ -62,7 +60,7 @@ let i = "10";
 let str = ""
  while(i >= 0){
  if(i % 2 == 0){
-  str = str + i
+  str += i
  } 
  i--;
 }
