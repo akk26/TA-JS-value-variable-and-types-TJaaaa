@@ -192,24 +192,51 @@ if(numbers>=0){
 
 // [Your code goes here]
 
-let firstNum = +prompt("Enter first Number?");
-let secondNum = +prompt("Enter Second Number?");
-let operatioInput = prompt("Enter any operational value?");
+// self code========
 
-switch(true){
-  case operatioInput === "+" : alert(firstNum + secondNum);
-  break; 
-  case operatioInput === "-" : if(firstNum < secondNum){
-    alert("Number two is larger then Number one")
-  } else {
-    alert(firstNum - secondNum)
-  }
-  break; 
-  case operatioInput === "*" : alert(firstNum * secondNum);
-  break; 
-  case operatioInput === "/" : if(firstNum < secondNum){
-    alert("Number two is larger then Number one")
-  } else {
-    alert(firstNum / secondNum)
-  }
+// let firstNum = +prompt("Enter first Number?");
+// let secondNum = +prompt("Enter Second Number?");
+// let operatioInput = prompt("Enter any operational value?");
+
+// switch(true){
+//   case operatioInput === "+" : alert(firstNum + secondNum);
+//   break; 
+//   case operatioInput === "-" : if(firstNum < secondNum){
+//     alert("Number two is larger then Number one")
+//   } else {
+//     alert(firstNum - secondNum)
+//   }
+//   break; 
+//   case operatioInput === "*" : alert(firstNum * secondNum);
+//   break; 
+//   case operatioInput === "/" : if(firstNum < secondNum){
+//     alert("Number two is larger then Number one")
+//   } else {
+//     alert(firstNum / secondNum)
+//   }
+// }
+
+
+// after feedback code===
+
+let firstNum = +prompt("Enter first value for operation");
+let secondNum = +prompt("Enter second value for operation");
+let operation = prompt("Enter an operation out of (Add, Sub, Mul, Div");
+
+switch(operation){
+  case "Add":
+    alert(`The sum of ${firstNum} and ${secondNum} is ${firstNum + secondNum}`);
+    break;
+    case "Sub":
+    alert(`The substraction of ${firstNum} and ${secondNum} is ${firstNum - secondNum}`);
+    break;
+    case "Mul":
+    alert(`The multiplication of ${firstNum} and ${secondNum} is ${firstNum * secondNum}`);
+    break;
+    case "Div":
+    alert(`The division of ${firstNum} and ${secondNum} is ${firstNum / secondNum}`);
+    break;
+
+    default:
+      alert("Enter a valid input")
 }
