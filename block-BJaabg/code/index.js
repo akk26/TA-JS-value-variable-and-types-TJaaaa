@@ -7,6 +7,28 @@
 */
 // your code goes here
 
+// const SPENDING_THRESHOLD = 200;
+// const TAX_RATE = 0.08;
+// const PHONE_PRICE = 99.99;
+// const ACCESSORY_PRICE = 9.99;
+
+// var bank_balance = 303.91;
+// var amount = 0;
+
+// while(bank_balance > 0){
+//   amount += PHONE_PRICE;
+//   if(amount < SPENDING_THRESHOLD) {
+//     amount += ACCESSORY_PRICE 
+//   }
+//   amount += TAX_RATE*amount
+//   alert(`$${amount}`);
+//   bank_balance = bank_balance - amount;
+// }
+
+
+// ⛑ Answer of the above will `$334.76`.
+
+
 const SPENDING_THRESHOLD = 200;
 const TAX_RATE = 0.08;
 const PHONE_PRICE = 99.99;
@@ -15,15 +37,20 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 
-while(bank_balance > 0){
-  amount += PHONE_PRICE;
-  if(amount < SPENDING_THRESHOLD) {
-    amount += ACCESSORY_PRICE 
+while(amount < bank_balance){
+  amount = amount + PHONE_PRICE;
+  if(amount < SPENDING_THRESHOLD){
+    amount = amount + ACCESSORY_PRICE
   }
-  amount += TAX_RATE
-  alert(`$${amount}`);
-  bank_balance = bank_balance - amount;
 }
 
+let tax = amount * TAX_RATE;
 
-// ⛑ Answer of the above will `$334.76`.
+let taxedAmount = amount + tax;
+alert(`$ ${taxedAmount}`);
+
+if(taxedAmount < bank_balance){
+  alert("You can afford it")
+} else{
+  alert("You can't afford it");
+}
